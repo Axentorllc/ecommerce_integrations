@@ -389,7 +389,8 @@
    "fieldtype": "Link",
    "label": "Default Shipping Charges Account",
    "options": "Account"
-  }
+  },
+  {
    "fieldname": "payment_gateways_section",
    "fieldtype": "Section Break",
    "label": "Payment Gateways"
