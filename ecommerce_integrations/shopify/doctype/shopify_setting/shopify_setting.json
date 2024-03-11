@@ -23,8 +23,6 @@
   "cash_bank_account",
   "column_break_19",
   "cost_center",
-  "inventory_settings_section",
-  "column_break_22",
   "section_break_25",
   "sales_order_series",
   "delivery_note_series",
@@ -38,6 +36,10 @@
   "section_break_22",
   "html_16",
   "taxes",
+  "section_break_zeoy",
+  "default_sales_tax_account",
+  "column_break_qibo",
+  "default_shipping_charges_account",
   "payment_gateways_section",
   "payment_gateways",
   "erpnext_to_shopify_sync_section",
@@ -125,11 +127,6 @@
    "label": "Customer Group",
    "mandatory_depends_on": "eval:doc.enable_shopify",
    "options": "Customer Group"
-  },
-  {
-   "fieldname": "inventory_settings_section",
-   "fieldtype": "Section Break",
-   "label": "Inventory Settings"
   },
   {
    "description": "If individual warehouse are not mapped, the default warehouse is considered for transactions.",
@@ -236,10 +233,6 @@
    "label": "Shopify Tax Account",
    "mandatory_depends_on": "eval:doc.enable_shopify",
    "options": "Shopify Tax Account"
-  },
-  {
-   "fieldname": "column_break_22",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "erpnext_to_shopify_sync_section",
@@ -375,6 +368,28 @@
    "label": "Consolidate Taxes in Order"
   },
   {
+   "description": "When no sales tax mapping is found this tax account will be used as the default account. This is only applied for Sales Tax. Any shipping related charges still need to be mapped separately.",
+   "fieldname": "default_sales_tax_account",
+   "fieldtype": "Link",
+   "label": "Default Sales Tax Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "section_break_zeoy",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "fieldname": "column_break_qibo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "When no shipping charge account mapping is found this account will be used as the default account.",
+   "fieldname": "default_shipping_charges_account",
+   "fieldtype": "Link",
+   "label": "Default Shipping Charges Account",
+   "options": "Account"
+  }
    "fieldname": "payment_gateways_section",
    "fieldtype": "Section Break",
    "label": "Payment Gateways"
